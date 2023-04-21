@@ -49,7 +49,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) =>
   arr.map(function(val,idx) {
-    return 2 ^ val;
+    return Math.pow(2, val);
   });
 
 /* ------------------------------------------------------------------------------------------------
