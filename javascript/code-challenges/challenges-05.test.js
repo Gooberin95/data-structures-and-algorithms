@@ -59,7 +59,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  let x = arr.reduce((red) => {
+    return red + 1;
+  }, 0);
+  return x;
 };
 
 /* ------------------------------------------------------------------------------------------------
