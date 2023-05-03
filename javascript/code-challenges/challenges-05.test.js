@@ -25,12 +25,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  return arr.reduce(( red, item ) => red + item );
+  let x = arr.reduce(( red, item ) => red + item,0 ) ;
+  return x;
 
-  // Solution code here...
 };
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -44,8 +42,13 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  // Solution code here...
+  let x = arr.reduce(( red, val ) => {
+    return red + val.purchasePrice;
+
+  },0);
+  return x;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
