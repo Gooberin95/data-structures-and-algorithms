@@ -1,5 +1,8 @@
 'use strict';
 
+const { val } = require("cheerio/lib/api/attributes");
+const { name } = require("mustache");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -122,8 +125,13 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let x = arr.reduce(( red, val) => {
+    return red + val.name;
+  },[]);
+  return x;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
