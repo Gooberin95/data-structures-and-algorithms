@@ -1,5 +1,8 @@
 'use strict';
 
+const { val } = require("cheerio/lib/api/attributes");
+const { map } = require("cheerio/lib/api/traversing");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -23,9 +26,10 @@ Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
-  // Solution code here...
+  return arr.map(person => {
+    return person.name.split("").reverse().join("");
+  });
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
