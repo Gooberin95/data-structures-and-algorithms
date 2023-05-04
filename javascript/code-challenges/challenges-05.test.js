@@ -19,7 +19,6 @@ const toLastNames = people => {
   return people.map( val => `${val.firstName} ${val.lastName}` );
   // Solution code here...
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -126,13 +125,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   let x = arr.reduce(( red, val) => {
-    return red + val.name;
+    red.push(val.name);
+    return red;
+
   },[]);
   return x;
 };
-
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
