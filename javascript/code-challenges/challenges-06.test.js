@@ -148,14 +148,14 @@ describe('Testing challenge 2', () => {
   });
 });
 
-// describe('Testing challenge 3', () => {
-//   test('It should append by modifying the oiginal', () => {
-//     const a = ['Yes', 'it', 'is'];
-//     appendFirstToLast(a);
+describe('Testing challenge 3', () => {
+  test('It should append by modifying the oiginal', () => {
+    const a = ['Yes', 'it', 'is'];
+    appendFirstToLast(a);
 
-//     expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
-//   });
-// });
+    expect(a).toStrictEqual(['Yes', 'it', 'is', 'Yes']);
+  });
+});
 
 // describe('Testing challenge 4', () => {
 //   test('It should add a property to an object', () => {
