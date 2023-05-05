@@ -55,8 +55,10 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  arr.push(arr[0]);
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -75,7 +77,12 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn:
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  let x = year;
+  let y = "yearBorn";
+  obj.setState{
+    this.x = x;
+    this.y = y;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
