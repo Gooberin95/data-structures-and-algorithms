@@ -39,10 +39,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  function containsAnd(arr) {
-    return arr.filter(str => str.includes('and'));
-  }
+
+  return arr.filter(val => val.includes("and"));
+
 };
+
 
 
 
@@ -54,8 +55,11 @@ Write a function named oddValues that, given an array of integers as input, uses
 
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
+function oddValues(arr){
+  return arr.filter(val => val % 2);
+}
 
-function oddValues(arr)
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -65,7 +69,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 function notInFirstArray(forbiddenValues, arr) {
-  // Solution code here...
+  return arr.filter(val => val >forbiddenValues.length);
 }
 
 /* ------------------------------------------------------------------------------------------------
