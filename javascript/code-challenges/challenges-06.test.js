@@ -76,10 +76,11 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn:
  1947 }
 ------------------------------------------------------------------------------------------------ */
 
-// const addBirthYearProperty = (obj, year) => {
+const addBirthYearProperty = (obj, year) => {
 
-
-// };
+  obj.yearBorn = year;
+  return obj;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -157,14 +158,14 @@ describe('Testing challenge 3', () => {
   });
 });
 
-// describe('Testing challenge 4', () => {
-//   test('It should add a property to an object', () => {
-//     const a = { fullName: 'Octavia Butler' };
-//     addBirthYearProperty(a, 1947);
+describe('Testing challenge 4', () => {
+  test('It should add a property to an object', () => {
+    const a = { fullName: 'Octavia Butler' };
+    addBirthYearProperty(a, 1947);
 
-//     expect(a.yearBorn).toStrictEqual(1947);
-//   });
-// });
+    expect(a.yearBorn).toStrictEqual(1947);
+  });
+});
 
 // xdescribe('Testing challenge 5', () => {
 //   test('It should add a property to every object in an array', () => {
