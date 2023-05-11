@@ -143,7 +143,7 @@ const listFoods = (recipe) => {
   let result = [];
   let box = recipe.ingredients;
   box.forEach(val => {
-    let x = val.slice(val.indexOf(' ')).slice(1);
+    let x = val.slice(val.indexOf('  ')).slice(1);
     result.push(x.slice(x.indexOf(' ')).slice(1));
 
   });
