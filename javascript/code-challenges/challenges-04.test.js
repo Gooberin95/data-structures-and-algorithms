@@ -21,9 +21,12 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-const updateAnimal = (arr, callback) => {
+const updateAnimal = (arr, banana) => {
   let newArr = [];
-  return newArr.forEach(callback());
+  arr.forEach(val => {
+    newArr.push(banana(val));
+  });
+  return newArr;
 
 };
 
