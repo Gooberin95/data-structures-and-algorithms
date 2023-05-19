@@ -75,7 +75,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) =>
-  arr.map(function(val,idx) {
+  arr.map(function(val, idx) {
     return Math.pow(2,val);
   });
 

@@ -56,7 +56,10 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-
+  console.log(Object.values(obj));
+  if(Object.value(obj.c) === value){
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,7 +138,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.map(val => {
+    houses.push(val.house);
+  });
   return houses;
 };
 
@@ -152,7 +157,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let box = [];
 
 };
 
