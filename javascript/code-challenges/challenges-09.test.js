@@ -1,5 +1,7 @@
 'use strict';
 
+const { val } = require("cheerio/lib/api/attributes");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -85,7 +87,13 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
 
+  const Book = Object.entries(obj).map(([name, phoneNumber]) => `${name}: ${phoneNumber}`);
+  return Book;
+
+
 };
+
+
 
 
 
@@ -159,7 +167,12 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  let box = [];
+  for (const obj of arr) {
+    if (Object.values(obj).includes(character) && obj.children) {
+      return true;
+    }
+  }
+  return false;
 
 };
 
