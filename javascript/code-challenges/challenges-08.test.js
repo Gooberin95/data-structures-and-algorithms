@@ -91,8 +91,12 @@ Write a function named containsW that takes in a string. This function should us
 
 const containsW = (str) => {
   let plate = str.split("");
-  console.log(plate);
-  for(i =)
+  if(plate.includes('w')) {
+    return true;
+  }
+  else {
+    return false;
+  }
   // const containsAnd = (arr) => {
   //   return arr.filter(val => val.includes("and"));
 
@@ -112,7 +116,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+
+  const pattern = /\d+/;
+  return pattern.test(input);
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +131,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  const pattern = /world/;
+  return pattern.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,7 +144,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
