@@ -56,9 +56,11 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  console.log(Object.values(obj));
-  if(Object.value(obj.c) === value){
+  if(Object.values(obj).includes(value)){
     return true;
+  }
+  else{
+    return false;
   }
 };
 
