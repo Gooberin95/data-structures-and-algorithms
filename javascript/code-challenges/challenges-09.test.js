@@ -5,7 +5,7 @@ const { val } = require("cheerio/lib/api/attributes");
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that finds the maximum value in an array
+Write a function tha
 using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
@@ -35,7 +35,7 @@ CHALLENGE 2
 
 Write a function named getCourseKeys that takes in the courseInfo object and returns an array containing the keys for the courseInfo object.
 
-For example: (['name', 'duration', 'topics', 'finalExam']).
+For example: (['name', 'duration', 'topics', 'finalExam'])
 ------------------------------------------------------------------------------------------------ */
 const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
