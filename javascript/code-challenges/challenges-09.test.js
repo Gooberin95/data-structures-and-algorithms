@@ -5,7 +5,7 @@ const { val } = require("cheerio/lib/api/attributes");
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function that finds the maximum value in an array
+Write a function tha
 using the 'reduce' method.
 
 E.g. [4,2,7,5,9,2] -> 9
