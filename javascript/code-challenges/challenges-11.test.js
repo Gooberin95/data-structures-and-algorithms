@@ -22,7 +22,7 @@ function transformToLis(obj){
   const lis = [];
 
   for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
+    if (obj(key)) {
       const listItem = `<li>${key}: ${obj[key]}</li>`;
       lis.push(listItem);
     }
@@ -153,7 +153,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
