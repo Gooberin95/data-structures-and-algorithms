@@ -23,7 +23,7 @@ function transformToLis(obj){
 
   for (const key in obj) {
     if (obj(key)) {
-      const listItem = `<li>${key}: ${obj[key]}</li>`;
+      const listItem = `<li>${key}: ${obj[key]}</li>,`;
       lis.push(listItem);
     }
   }
