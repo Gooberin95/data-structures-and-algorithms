@@ -11,8 +11,7 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  const regex = /^(?:Mr\.|Mrs\.|Ms\.|Dr\.)\s[A-Za-z\s]+$/;
-  arr.filter((name) => name.test(regex));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +121,20 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    const valueA = a[property];
+    const valueB = b[property];
+
+    if (valueA < valueB) {
+      return -1;
+    } else if (valueA > valueB) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,7 +150,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,7 +173,34 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  const helpCheck = (row1, col1, row2, col2, row3, col3) => {
+    const value1 = board[row1][col1];
+    const value2 = board[row2][col2];
+    const value3 = board[row3][col3];
+    return value1 !== '' && value1 === value2 && value2 === value3;
+  };
+
+  // Check rows
+  for (let row = 0; row < 3; row++) {
+    if (helpCheck(row, 0, row, 1, row, 2)) {
+      return true;
+    }
+  }
+
+  // Check columns
+  for (let col = 0; col < 3; col++) {
+    if (helpCheck(0, col, 1, col, 2, col)) {
+      return true;
+    }
+  }
+
+  // Check diagonals
+  if (helpCheck(0, 0, 1, 1, 2, 2) || helpCheck(0, 2, 1, 1, 2, 0)) {
+    return true;
+  }
+
+  return false;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
